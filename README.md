@@ -4,6 +4,31 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
 
 > The instructions in this repository have been tested with **Windows 10**.
 
+## Contents
+
+
+<!-- vim-markdown-toc GFM -->
+
+- [Introduction](#introduction)
+- [Configure Windows settings](#configure-windows-settings)
+  - [1. Install a custom keyboard layout](#1-install-a-custom-keyboard-layout)
+  - [2. Install custom key remappings](#2-install-custom-key-remappings)
+  - [3. Customise the touchpad](#3-customise-the-touchpad)
+  - [4. Customise the taskbar](#4-customise-the-taskbar)
+  - [5. Miscellaneous settings](#5-miscellaneous-settings)
+  - [6. Install and configure Windows Terminal](#6-install-and-configure-windows-terminal)
+    - [Installation](#installation)
+    - [Configuration](#configuration)
+  - [7. Install Git for Windows](#7-install-git-for-windows)
+  - [8. Set up eduroam](#8-set-up-eduroam)
+- [Install Linux with WSL&nbsp;2](#install-linux-with-wslnbsp2)
+  - [1. Enable WSL&nbsp;2](#1-enable-wslnbsp2)
+  - [2. Installing a Linux distribution](#2-installing-a-linux-distribution)
+  - [3. Creating a Windows Terminal profile](#3-creating-a-windows-terminal-profile)
+  - [4. Setting up Linux](#4-setting-up-linux)
+
+<!-- vim-markdown-toc -->
+
 ## Introduction
 
 If you're reading this, you're probably a non-Windows user who is forced, through whatever circumstances, to work on a Windows machine (_ugh!_). This repository contains instructions to get out of the hell as quick as possible and create an environment that resembles macOS/Linux as much as possible.
