@@ -1,6 +1,6 @@
 # Windows Setup
 
-Step-by-step guide for making a Windows machine bearable and usable (i.e. macOS/Linux-like).
+Step-by-step guide for making a Windows machine more macOS/Linux-like as quick as possible.
 
 > The instructions in this repository have been tested with **Windows 10**.
 
@@ -11,7 +11,7 @@ If you're reading this, you're probably a non-Windows user who is forced, throug
 The survival guide consists mainly of the following parts:
 
 1. Configure Windows settings
-1. Install Linux with [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/)
+1. Install Linux with [WSL&nbsp;2](https://learn.microsoft.com/en-us/windows/wsl/)
 
 Let's bite the bullet and go through it!
 
@@ -71,7 +71,7 @@ In _**Settings > Devices > Touchpad > Taps**_, make the following changes:
 
 Since Windows Terminal is relatively new (introduced in 2019, see [announcement](https://devblogs.microsoft.com/commandline/introducing-windows-terminal/)), it is not yet included in Windows by default and must be manually installed.
 
-**After installing Windows Terminal, you can forget about the existence of the built-in _Command Prompt_ and _PowerShell_ applications, you will never need to use them again!**
+> **After installing Windows Terminal, you can forget about the existence of the built-in _Command Prompt_ and _PowerShell_ applications, you will never need to use them again!**
 
 #### Installation
 
@@ -97,11 +97,11 @@ To configure Windows Terminal, apply the custom settings from [👉 here](https:
 1. Overwrite the content of the settings file with the custom settings in [`settings.json`](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json)
 1. Save the Windows Terminal settings file and restart Windows Terminal
 
-> As mentioned, Windows Terminal is the only terminal application that you will ever need from now on. WSL 2 will run from Windows Terminal, and if you need _Command Prompt_ or _PowerShell_ you can run them in Windows Terminal too (through their corresponding profiles).
+> As mentioned, Windows Terminal is the only terminal application that you will ever need from now on. WSL&nbsp;2 will run from Windows Terminal, and if you need _Command Prompt_ or _PowerShell_ you can run them in Windows Terminal too (through their corresponding profiles).
 
 ### 7. Install Git for Windows
 
-This is not for using Git on Windows (_God forbid!_) but for making the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) available to the Linux distributions in WSL 2 (that will be installed later). This is the [recommended way](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json) of setting up Git credentials in WSL 2.
+This is not for using Git on Windows (_God forbid!_) but for making the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) available to the Linux distributions in WSL&nbsp;2 (that will be installed later). This is the [recommended way](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json) of setting up Git credentials in WSL&nbsp;2.
 
 Install Git for Windows as follows:
 
@@ -115,7 +115,7 @@ Install Git for Windows as follows:
 
 Set up access to eduroam by following the instructions [👉 here](https://github.com/weibeld/eduroam-setup).
 
-## Install Linux with WSL 2
+## Install Linux with WSL&nbsp;2
 
 Now that Windows itself is a tiny bit less insufferable, it's time to install Linux on it so that you can forget about 90% of the time that you're actually working on Windows.
 
@@ -125,9 +125,9 @@ One possible way to do this is with the [Windows Subsystem for Linux (WSL)](http
 
 Note that the following instructions will use Ubuntu as an example Linux distributions, however, the process remains largely the same for other Linux distributions.
 
-### 1. Enable WSL 2
+### 1. Enable WSL&nbsp;2
 
-WSL 2 is included by default in Windows and it just needs to be enabled. This can be done as follows:
+WSL&nbsp;2 is included by default in Windows and it just needs to be enabled. This can be done as follows:
 
 1. Type `wt` in the Windows search bar and click on _**Run as administrator**_
 1. In the _Command Prompt_ or _PowerShell_ that opens, execute:
@@ -138,7 +138,7 @@ WSL 2 is included by default in Windows and it just needs to be enabled. This ca
 
 ### 2. Installing a Linux distribution
 
-With WSL 2 enabled, it's possible to install a Linux distribution.
+With WSL&nbsp;2 enabled, it's possible to install a Linux distribution.
 
 From _Command Prompt_ or _PowerShell_ in Windows Terminal, run the following to list all the Linux distributions that are available for installation:
 
@@ -170,7 +170,7 @@ This drops you into the Ubuntu command line within Windows Terminal.
 
 ### 3. Creating a Windows Terminal profile
 
-Since 99% of the time when you open a terminal you want to use your WSL 2 Linux distribution, it's best to create a corresponding Windows Terminal profile and set it as the default profile. In this way, whenever you open Windows Terminal, you're dropped straight into your Linux distribution.
+Since 99% of the time when you open a terminal you want to use your WSL&nbsp;2 Linux distribution, it's best to create a corresponding Windows Terminal profile and set it as the default profile. In this way, whenever you open Windows Terminal, you're dropped straight into your Linux distribution.
 
 To do so, proceed as follows:
 
@@ -184,7 +184,7 @@ To do so, proceed as follows:
 
 After that, quit and restart Windows Terminal and you should be dropped right into your Linux distribution.
 
-> It's possible that Windows Terminal has already auto-created a profile for the detected WSL 2 Linux distributions. Of course, you can also use this auto-created profile, or else you can safely delete it.
+> It's possible that Windows Terminal has already auto-created a profile for the detected WSL&nbsp;2 Linux distributions. Of course, you can also use this auto-created profile, or else you can safely delete it.
 
 ### 4. Setting up Linux
 
