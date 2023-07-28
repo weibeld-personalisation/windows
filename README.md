@@ -21,8 +21,8 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
     - [Configuration](#configuration)
   - [7. Install Git for Windows](#7-install-git-for-windows)
   - [8. Set up eduroam](#8-set-up-eduroam)
-- [Install Linux with WSL&nbsp;2](#install-linux-with-wslnbsp2)
-  - [1. Enable WSL&nbsp;2](#1-enable-wslnbsp2)
+- [Install Linux with WSL 2](#install-linux-with-wsl-2)
+  - [1. Enable WSL 2](#1-enable-wsl-2)
   - [2. Installing a Linux distribution](#2-installing-a-linux-distribution)
   - [3. Creating a Windows Terminal profile](#3-creating-a-windows-terminal-profile)
   - [4. Setting up Linux](#4-setting-up-linux)
@@ -140,7 +140,7 @@ Install Git for Windows as follows:
 
 Set up access to eduroam by following the instructions [👉 here](https://github.com/weibeld/eduroam-setup).
 
-## Install Linux with WSL&nbsp;2
+## Install Linux with WSL 2
 
 Now that Windows itself is a tiny bit less insufferable, it's time to install Linux on it so that you can forget about 90% of the time that you're actually working on Windows.
 
@@ -150,7 +150,7 @@ One possible way to do this is with the [Windows Subsystem for Linux (WSL)](http
 
 Note that the following instructions will use Ubuntu as an example Linux distributions, however, the process remains largely the same for other Linux distributions.
 
-### 1. Enable WSL&nbsp;2
+### 1. Enable WSL 2
 
 WSL&nbsp;2 is included by default in Windows and it just needs to be enabled. This can be done as follows:
 
