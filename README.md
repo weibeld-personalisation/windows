@@ -21,8 +21,8 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
     - [Configuration](#configuration)
   - [7. Install Git for Windows](#7-install-git-for-windows)
   - [8. Set up eduroam](#8-set-up-eduroam)
-- [Configure WSL2](#configure-wsl2)
-  - [1. Enable WSL 2](#1-enable-wsl-2)
+- [Configure WSL](#configure-wsl)
+  - [1. Enable WSL](#1-enable-wsl)
   - [2. Installing a Linux distribution](#2-installing-a-linux-distribution)
   - [3. Creating a Windows Terminal profile](#3-creating-a-windows-terminal-profile)
   - [4. Setting up Linux](#4-setting-up-linux)
@@ -36,7 +36,7 @@ If you're reading this, you're probably a non-Windows user who is forced, throug
 The survival guide consists mainly of the following parts:
 
 1. Configure Windows
-1. Install Linux on Windows with [WSL&nbsp;2](https://learn.microsoft.com/en-us/windows/wsl/)
+1. Install Linux on Windows with [WSL](https://learn.microsoft.com/en-us/windows/wsl/)
 
 Let's bite the bullet and go through it!
 
@@ -122,11 +122,11 @@ To configure Windows Terminal, apply the custom settings from [👉 here](https:
 1. Overwrite the content of the settings file with the custom settings in [`settings.json`](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json)
 1. Save the Windows Terminal settings file and restart Windows Terminal
 
-> As mentioned, Windows Terminal is the only terminal application that you will ever need from now on. WSL&nbsp;2 will run from Windows Terminal, and if you need _Command Prompt_ or _PowerShell_ you can run them in Windows Terminal too (through their corresponding profiles).
+> As mentioned, Windows Terminal is the only terminal application that you will ever need from now on. WSL will run from Windows Terminal, and if you need _Command Prompt_ or _PowerShell_ you can run them in Windows Terminal too (through their corresponding profiles).
 
 ### 7. Install Git for Windows
 
-This is not for using Git on Windows (_God forbid!_) but for making the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) available to the Linux distributions in WSL&nbsp;2 (that will be installed later). This is the [recommended way](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json) of setting up Git credentials in WSL&nbsp;2.
+This is not for using Git on Windows (_God forbid!_) but for making the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) available to the Linux distributions in WSL (that will be installed later). This is the [recommended way](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json) of setting up Git credentials in WSL.
 
 Install Git for Windows as follows:
 
@@ -140,7 +140,7 @@ Install Git for Windows as follows:
 
 **To set up access to eduroam, follow the instructions [👉 here](https://github.com/weibeld/eduroam-setup).**
 
-## Configure WSL2
+## Configure WSL
 
 Now that Windows itself is a tiny bit less insufferable, it's time to install Linux on it so that you can forget about 90% of the time that you're actually working on Windows.
 
@@ -150,9 +150,9 @@ One possible way to do this is with the [Windows Subsystem for Linux (WSL)](http
 
 Note that the following instructions will use Ubuntu as an example Linux distributions, however, the process remains largely the same for other Linux distributions.
 
-### 1. Enable WSL 2
+### 1. Enable WSL
 
-WSL&nbsp;2 is included by default in Windows and it just needs to be enabled. This can be done as follows:
+WSL is included by default in Windows and it just needs to be enabled. This can be done as follows:
 
 1. Type `wt` in the Windows search bar and click on _**Run as administrator**_
 1. In the _Command Prompt_ or _PowerShell_ that opens, execute:
@@ -163,7 +163,7 @@ WSL&nbsp;2 is included by default in Windows and it just needs to be enabled. Th
 
 ### 2. Installing a Linux distribution
 
-With WSL&nbsp;2 enabled, it's possible to install a Linux distribution.
+With WSL enabled, it's possible to install a Linux distribution.
 
 From _Command Prompt_ or _PowerShell_ in Windows Terminal, run the following to list all the Linux distributions that are available for installation:
 
@@ -195,13 +195,13 @@ This drops you into the Ubuntu command line within Windows Terminal.
 
 ### 3. Creating a Windows Terminal profile
 
-Since 99% of the time when you open a terminal you want to use your WSL&nbsp;2 Linux distribution, it's best to create a corresponding Windows Terminal profile and set it as the default profile. In this way, whenever you open Windows Terminal, you're dropped straight into your Linux distribution.
+Since 99% of the time when you open a terminal you want to use your WSL Linux distribution, it's best to create a corresponding Windows Terminal profile and set it as the default profile. In this way, whenever you open Windows Terminal, you're dropped straight into your Linux distribution.
 
 To do so, proceed as follows:
 
 1. In Windows Terminal click _Ctrl-Comma_ to open the settings
 1. In the left settings pane, click on _**Add a new profile > New empty profile**_ and configure the following parameters:
-   1. _**Name:**_ any name representing the Linux distribution (e.g. `WSL2 Ubuntu`)
+   1. _**Name:**_ any name representing the Linux distribution (e.g. `WSL Ubuntu`)
    1. _**Command line:**_ `wsl -d Ubuntu`
    1. _**Icon**_: any image file representing the Linux distriubtion (check [👉 here](https://github.com/weibeld/windows-terminal-settings/tree/main/icons))
 1. In the left settings pane, go to _**Startup**_ and set _**Default profile**_ to the profile you just created
@@ -209,7 +209,7 @@ To do so, proceed as follows:
 
 After that, quit and restart Windows Terminal and you should be dropped right into your Linux distribution.
 
-> It's possible that Windows Terminal has already auto-created a profile for the detected WSL&nbsp;2 Linux distributions. Of course, you can also use this auto-created profile, or else you can safely delete it.
+> It's possible that Windows Terminal has already auto-created a profile for the detected WSL Linux distributions. Of course, you can also use this auto-created profile, or else you can safely delete it.
 
 ### 4. Setting up Linux
 
