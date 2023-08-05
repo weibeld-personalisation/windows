@@ -10,7 +10,7 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
 <!-- vim-markdown-toc GFM -->
 
 - [Introduction](#introduction)
-- [Configure Windows settings](#configure-windows-settings)
+- [Configure Windows](#configure-windows)
   - [1. Install a custom keyboard layout](#1-install-a-custom-keyboard-layout)
   - [2. Install custom key remappings](#2-install-custom-key-remappings)
   - [3. Customise the touchpad](#3-customise-the-touchpad)
@@ -21,7 +21,7 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
     - [Configuration](#configuration)
   - [7. Install Git for Windows](#7-install-git-for-windows)
   - [8. Set up eduroam](#8-set-up-eduroam)
-- [Install Linux with WSL 2](#install-linux-with-wsl-2)
+- [Configure WSL2](#configure-wsl2)
   - [1. Enable WSL 2](#1-enable-wsl-2)
   - [2. Installing a Linux distribution](#2-installing-a-linux-distribution)
   - [3. Creating a Windows Terminal profile](#3-creating-a-windows-terminal-profile)
@@ -35,12 +35,12 @@ If you're reading this, you're probably a non-Windows user who is forced, throug
 
 The survival guide consists mainly of the following parts:
 
-1. Configure Windows settings
-1. Install Linux with [WSL&nbsp;2](https://learn.microsoft.com/en-us/windows/wsl/)
+1. Configure Windows
+1. Install Linux on Windows with [WSL&nbsp;2](https://learn.microsoft.com/en-us/windows/wsl/)
 
 Let's bite the bullet and go through it!
 
-## Configure Windows settings
+## Configure Windows
 
 > The following instructions are sorted by urgency, that is, the most insufferable things are fixed first and the more tolerable things are addressed later. So, it's best to follow the guide in this order.
 
@@ -48,13 +48,13 @@ Let's bite the bullet and go through it!
 
 > This step is optional if you're not content with any of the included keyboard layouts of Windows.
 
-To install a custom keyboard layout, follow the instructions [👉 here](https://github.com/weibeld/logitech-swiss-german-keyboard-layout#windows).
+**To install a custom keyboard layout, follow the instructions [👉 here](https://github.com/weibeld/logitech-swiss-german-keyboard-layout#windows).**
 
 The above instructions are for an example keyboard layout (Logitech Swiss German), however, it works the same for any keyboard layout. All you need for it is your desired keyboard layout as a `.klc` file.
 
 ### 2. Install custom key remappings
 
-To install a set of custom key remappings, follow the instructions [👉 here](https://github.com/weibeld/autohotkey-windows-key-remappings).
+**To install a set of custom key remappings, follow the instructions [👉 here](https://github.com/weibeld/autohotkey-windows-key-remappings).**
 
 The remappings in the above instructions make the Windows keyboard more similar to a macOS keyboard (for example, use _Win-C_ instead of _Ctrl-C_ for copying, thus resembling _Cmd-C_ on macOS). They also swap the _Caps Lock_ and _Ctrl_ keys, a common customisation among macOS/Linux users to make the _Ctrl_ easier to press.
 
@@ -138,9 +138,9 @@ Install Git for Windows as follows:
 
 > This step is optional and applies only if you have [eduroam](https://eduroam.org/) access (linked repo below is private).
 
-Set up access to eduroam by following the instructions [👉 here](https://github.com/weibeld/eduroam-setup).
+**To set up access to eduroam, follow the instructions [👉 here](https://github.com/weibeld/eduroam-setup).**
 
-## Install Linux with WSL 2
+## Configure WSL2
 
 Now that Windows itself is a tiny bit less insufferable, it's time to install Linux on it so that you can forget about 90% of the time that you're actually working on Windows.
 
