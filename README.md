@@ -23,9 +23,10 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
   - [8. Set up eduroam](#8-set-up-eduroam)
 - [Configure WSL](#configure-wsl)
   - [1. Enable WSL](#1-enable-wsl)
-  - [2. Installing a Linux distribution](#2-installing-a-linux-distribution)
-  - [3. Creating a Windows Terminal profile](#3-creating-a-windows-terminal-profile)
-  - [4. Setting up Linux](#4-setting-up-linux)
+  - [2. Install a Linux distribution in WSL](#2-install-a-linux-distribution-in-wsl)
+  - [3. Configure WSL settings for the Linux distribution](#3-configure-wsl-settings-for-the-linux-distribution)
+  - [4. Configure the Linux distribution](#4-configure-the-linux-distribution)
+  - [5. Create a Windows Terminal profile for the Linux distribution](#5-create-a-windows-terminal-profile-for-the-linux-distribution)
 
 <!-- vim-markdown-toc -->
 
@@ -154,63 +155,85 @@ Note that the following instructions will use Ubuntu as an example Linux distrib
 
 WSL is included by default in Windows and it just needs to be enabled. This can be done as follows:
 
-1. Type `wt` in the Windows search bar and click on _**Run as administrator**_
-1. In the _Command Prompt_ or _PowerShell_ that opens, execute:
+1. Open and admin shell, which can be done in either of these ways:
+   - Locate Windows Terminal (`wt`) in the start menu and click _Run as administrator_
+   - In Windows Terminal, click on the triangle in the tab bar, hold down the _Ctrl_ key and click on either _Command Prompt_ or _PowerShell_
+1. In the admin shell, execute the following:
    ```powershell
    wsl --install
    ```
-1. Exit Windows Terminal
+1. When the installation finishes, close and reopen Windows Terminal (in order to be back in a non-admin shell)
 
-### 2. Installing a Linux distribution
+### 2. Install a Linux distribution in WSL
 
-With WSL enabled, it's possible to install a Linux distribution.
+The next step is to install a Linux distribution in WSL.
 
-From _Command Prompt_ or _PowerShell_ in Windows Terminal, run the following to list all the Linux distributions that are available for installation:
+You can list all the available Linux distributions with the following command:
 
 ```powershell
 wsl -l -o
 ```
 
-To install the _Ubuntu_ distribution, run:
+To install a distribution, you can use:
 
 ```powershell
-wsl --install Ubuntu
+wsl --install <Name>
 ```
 
-The above might take a while and you are also prompted to set a username and password for the Linux user. Note that this is completely independen from your user account on Windows.
+Where `<Name>` is the name of the desired distribution, for example `Ubuntu` or `Debian`.
 
-Once the installation is comlete, you can list all installed Linux distributions with:
+During installation, you will be prompted for a username and password for the Linux user. You can freely choose these credentials.
+
+When the installation completes, you will be dropped in a shell in the installed Linux distribution. You can exit the Linux distribution at any time with `exit`.
+
+From a Windows shell, you can list all installed Linux distributions with:
 
 ```powershell
 wsl -l -v
 ```
 
-To start the _Ubuntu_ distribution, execute the following:
+And you can start a specific distribution with:
 
 ```powershell
-wsl -d Ubuntu
+wsl -d <Name>
 ````
 
-This drops you into the Ubuntu command line within Windows Terminal.
+When you exit a Linux distribution, it keeps running for a few seconds before being terminated. You can always explicitly terminate a Linux distribution with:
 
-### 3. Creating a Windows Terminal profile
+```powershell
+wsl -t <Name>
+```
 
-Since 99% of the time when you open a terminal you want to use your WSL Linux distribution, it's best to create a corresponding Windows Terminal profile and set it as the default profile. In this way, whenever you open Windows Terminal, you're dropped straight into your Linux distribution.
+You can also terminate all running Linux distributions at once with:
+
+```powershell
+wsl --shutdown
+```
+
+### 3. Configure WSL settings for the Linux distribution
+
+TODO: common settings in `/etc/wsl.conf` that are recommended for all Linux distributions
+
+### 4. Configure the Linux distribution
+
+TODO: create Linux setup script on GitHub and apply it here.
+
+### 5. Create a Windows Terminal profile for the Linux distribution
+
+Since 99% of the time when you open Windows Terminal you want to use a Linux distribution in WSL, it's best to create a corresponding Windows Terminal profile and set it as the default profile. In this way, whenever you open Windows Terminal, you're dropped straight into your Linux distribution.
 
 To do so, proceed as follows:
 
-1. In Windows Terminal click _Ctrl-Comma_ to open the settings
+1. In Windows Terminal type _Ctrl-Comma_ to open the settings
 1. In the left settings pane, click on _**Add a new profile > New empty profile**_ and configure the following parameters:
    1. _**Name:**_ any name representing the Linux distribution (e.g. `WSL Ubuntu`)
-   1. _**Command line:**_ `wsl -d Ubuntu`
+   1. _**Command line:**_ `wsl -d <Name>`
+      - Where `<Name>` is the name of the desired Linux distribution (e.g. `Ubuntu`)
    1. _**Icon**_: any image file representing the Linux distriubtion (check [👉 here](https://github.com/weibeld/windows-terminal-settings/tree/main/icons))
 1. In the left settings pane, go to _**Startup**_ and set _**Default profile**_ to the profile you just created
 1. Click _**Save**_ in the lower right corner
 
 After that, quit and restart Windows Terminal and you should be dropped right into your Linux distribution.
 
-> It's possible that Windows Terminal has already auto-created a profile for the detected WSL Linux distributions. Of course, you can also use this auto-created profile, or else you can safely delete it.
+> It's possible that Windows Terminal has already auto-created a profile for each detected WSL Linux distribution. You may also use this auto-created profile for your Linux distribution, however, if you decide to create a new profile, you can safely delete the auto-created profile.
 
-### 4. Setting up Linux
-
-TODO: create Linux setup script on GitHub and apply it here.
