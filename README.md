@@ -20,7 +20,13 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
     - [Installation](#installation)
     - [Configuration](#configuration)
   - [7. Install Git for Windows](#7-install-git-for-windows)
-  - [8. Set up eduroam](#8-set-up-eduroam)
+  - [8. Install and configure PowerToys](#8-install-and-configure-powertoys)
+    - [Color Picker](#color-picker)
+    - [Paste As Plain Text](#paste-as-plain-text)
+    - [Peek](#peek)
+    - [Screen Ruler](#screen-ruler)
+    - [Text Extractor](#text-extractor)
+  - [9. Set up eduroam](#9-set-up-eduroam)
 - [Configure WSL](#configure-wsl)
   - [1. Enable WSL](#1-enable-wsl)
   - [2. Install a Linux distribution in WSL](#2-install-a-linux-distribution-in-wsl)
@@ -123,7 +129,7 @@ To configure Windows Terminal, apply the custom settings from [👉 here](https:
 1. Overwrite the content of the settings file with the custom settings in [`settings.json`](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json)
 1. Save the Windows Terminal settings file and restart Windows Terminal
 
-> As mentioned, Windows Terminal is the only terminal application that you will ever need from now on. WSL will run from Windows Terminal, and if you need _Command Prompt_ or _PowerShell_ you can run them in Windows Terminal too (through their corresponding profiles).
+> As mentioned, Windows Terminal is the only terminal application that you will ever need from now on. WSL will run in Windows Terminal, and if you need a _PowerShell_ or _Command Prompt_ shell, you can run them in Windows Terminal too (through their corresponding profiles).
 
 ### 7. Install Git for Windows
 
@@ -135,7 +141,61 @@ Install Git for Windows as follows:
 1. Download the `*-64-bit.exe` file
 1. Install by double-clicking the `.exe` file and accepting all the default options
 
-### 8. Set up eduroam
+### 8. Install and configure PowerToys
+
+[Microsoft PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/) is a set of general-purpose utilities and some of them are surprisingly well-made and handy. Let's install and configure the most useful ones of these utilities.
+
+To install PowerToys, run the following in a _PowerShell_ or _Command Prompt_ shell in Windows Terminal:
+
+```powershell
+winget install Microsoft.PowerToys --source winget
+```
+
+PowerToys has a GUI showing all the utilities in the left sidebar. Some of these utilities are enabled by default and others are disabled.
+
+Below, we will focus on the following utilities which are among the most useful ones:
+
+1. [Color Picker](https://learn.microsoft.com/en-us/windows/powertoys/color-picker)
+1. [Paste As Plain Text](https://learn.microsoft.com/en-us/windows/powertoys/paste-as-plain-text)
+1. [Peek](https://learn.microsoft.com/en-us/windows/powertoys/peek)
+1. [Screen Ruler](https://learn.microsoft.com/en-us/windows/powertoys/screen-ruler)
+1. [Text Extractor](https://learn.microsoft.com/en-us/windows/powertoys/text-extractor)
+
+Feel free to also explore the other utilities as there is a lot of useful stuff. Ideally, disable the utilities that you don't use to prevent unwanted triggerings.
+
+> PowerToys launches automatically at startup (you can see this by a PowerToys icon in the notification area of the taskbar). That means, the utilities will always be available without any further actions.
+
+#### Color Picker
+
+This is similar to the [Digital Color Meter](https://support.apple.com/en-gb/guide/digital-color-meter/welcome/mac) utility on macOS.
+
+Change the activation shortcut to something that doesn't conflict with the above key remapping and is easy to press, for example, _Alt-C_. Now you can press _Alt-C_ at any time to open the colour picker.
+
+#### Paste As Plain Text
+
+This allows defining a keyboard shortcut for pasting text as pure plain text even if it has been copied with formatting information. This is **highly** useful, especially when copying text from websites and other documents.
+
+Change the activation shortcut to something that doesn't conflict with the above key remappings, for example, _Alt-V_. Now, if pasting something includes annoying formatting, just paste it again with _Alt-V_ to get only the plain text.
+
+#### Peek
+
+This is similar to the [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) feature of macOS that shows a preview of the file when pressing the _Space_ key on one or more selected files.
+
+In PowerToys, a _Space_ alone can't be used as an activation shortcut, so the best you can do is set it to something similar like _Win-Space_.
+
+#### Screen Ruler
+
+This allows measuring pixels on the screen in various useful ways. I'm not aware of a similar utility on macOS, but in any case it can be very useful, for example, when working with images, building a website, etc.
+
+The default activation shortcut of _Win-Shift-M_ seems to work fine.
+
+#### Text Extractor
+
+This is probably the most remarkable utility as it allows performing optical character recognition (OCR) on any part of the screen. This can be extremely useful, for example, for capturing URLs or other text in a video conference where copy-paste doesn't work.
+
+The default activation shortcut of _Win-Shift-T_ seems to work fine. When selecting a portion of the screen, the extracted text is immediately saved in the clipboard and ready to be pasted with the usual paste key combination.
+
+### 9. Set up eduroam
 
 > This step is optional and applies only if you have [eduroam](https://eduroam.org/) access (linked repo below is private).
 
