@@ -161,7 +161,7 @@ Below, we will focus on the following utilities which are among the most useful 
 1. [Screen Ruler](https://learn.microsoft.com/en-us/windows/powertoys/screen-ruler)
 1. [Text Extractor](https://learn.microsoft.com/en-us/windows/powertoys/text-extractor)
 
-Feel free to also explore the other utilities as there is a lot of useful stuff. Ideally, disable the utilities that you don't use to prevent unwanted triggerings.
+Feel free to also explore the other utilities as well as there is a lot of useful stuff. Ideally, disable the utilities that you don't use to prevent unwanted triggerings.
 
 > PowerToys launches automatically at startup (you can see this by a PowerToys icon in the notification area of the taskbar). That means, the utilities will always be available without any further actions.
 
@@ -169,31 +169,31 @@ Feel free to also explore the other utilities as there is a lot of useful stuff.
 
 This is similar to the [Digital Color Meter](https://support.apple.com/en-gb/guide/digital-color-meter/welcome/mac) utility on macOS.
 
-Change the activation shortcut to something that doesn't conflict with the above key remapping and is easy to press, for example, _Alt-C_. Now you can press _Alt-C_ at any time to open the colour picker.
+Change the activation shortcut to something that doesn't conflict with the above key remapping and is easy to press, for example, _**Alt-C**_. Now you can press _**Alt-C**_ at any time to open the colour picker.
 
 #### Paste As Plain Text
 
 This allows defining a keyboard shortcut for pasting text as pure plain text even if it has been copied with formatting information. This is **highly** useful, especially when copying text from websites and other documents.
 
-Change the activation shortcut to something that doesn't conflict with the above key remappings, for example, _Alt-V_. Now, if pasting something includes annoying formatting, just paste it again with _Alt-V_ to get only the plain text.
+Change the activation shortcut to something that doesn't conflict with the above key remappings, for example, _**Alt-V**_. Now, if pasting something includes annoying formatting, just paste it again with _**Alt-V**_ to get only the plain text.
 
 #### Peek
 
-This is similar to the [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) feature of macOS that shows a preview of the file when pressing the _Space_ key on one or more selected files.
+This is similar to the [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) feature of macOS that shows a preview of the file when pressing the _**Space**_ key on one or more selected files.
 
-In PowerToys, a _Space_ alone can't be used as an activation shortcut, so the best you can do is set it to something similar like _Win-Space_.
+In PowerToys, a _**Space**_ alone can't be used as an activation shortcut, so the best you can do is set it to something similar like _**Win-Space**_.
 
 #### Screen Ruler
 
 This allows measuring pixels on the screen in various useful ways. I'm not aware of a similar utility on macOS, but in any case it can be very useful, for example, when working with images, building a website, etc.
 
-The default activation shortcut of _Win-Shift-M_ seems to work fine.
+The default activation shortcut of _**Win-Shift-M**_ seems to work fine.
 
 #### Text Extractor
 
 This is probably the most remarkable utility as it allows performing optical character recognition (OCR) on any part of the screen. This can be extremely useful, for example, for capturing URLs or other text in a video conference where copy-paste doesn't work.
 
-The default activation shortcut of _Win-Shift-T_ seems to work fine. When selecting a portion of the screen, the extracted text is immediately saved in the clipboard and ready to be pasted with the usual paste key combination.
+The default activation shortcut of _**Win-Shift-T**_ seems to work fine. When selecting a portion of the screen, the extracted text is immediately saved in the clipboard and ready to be pasted with the usual paste key combination.
 
 ### 9. Set up eduroam
 
