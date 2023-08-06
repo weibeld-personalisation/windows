@@ -21,11 +21,11 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
     - [Configuration](#configuration)
   - [7. Install Git for Windows](#7-install-git-for-windows)
   - [8. Install and configure PowerToys](#8-install-and-configure-powertoys)
-    - [Color Picker](#color-picker)
-    - [Paste As Plain Text](#paste-as-plain-text)
-    - [Peek](#peek)
-    - [Screen Ruler](#screen-ruler)
-    - [Text Extractor](#text-extractor)
+    - [1. Color Picker](#1-color-picker)
+    - [2. Paste As Plain Text](#2-paste-as-plain-text)
+    - [3. Peek](#3-peek)
+    - [4. Screen Ruler](#4-screen-ruler)
+    - [5. Text Extractor](#5-text-extractor)
   - [9. Set up eduroam](#9-set-up-eduroam)
 - [Configure WSL](#configure-wsl)
   - [1. Enable WSL](#1-enable-wsl)
@@ -165,31 +165,31 @@ Feel free to also explore the other utilities as well as there is a lot of usefu
 
 > PowerToys launches automatically at startup (you can see this by a PowerToys icon in the notification area of the taskbar). That means, the utilities will always be available without any further actions.
 
-#### Color Picker
+#### 1. Color Picker
 
 This is similar to the [Digital Color Meter](https://support.apple.com/en-gb/guide/digital-color-meter/welcome/mac) utility on macOS.
 
 Change the activation shortcut to something that doesn't conflict with the above key remapping and is easy to press, for example, _**Alt-C**_. Now you can press _**Alt-C**_ at any time to open the colour picker.
 
-#### Paste As Plain Text
+#### 2. Paste As Plain Text
 
 This allows defining a keyboard shortcut for pasting text as pure plain text even if it has been copied with formatting information. This is **highly** useful, especially when copying text from websites and other documents.
 
 Change the activation shortcut to something that doesn't conflict with the above key remappings, for example, _**Alt-V**_. Now, if pasting something includes annoying formatting, just paste it again with _**Alt-V**_ to get only the plain text.
 
-#### Peek
+#### 3. Peek
 
 This is similar to the [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) feature of macOS that shows a preview of the file when pressing the _**Space**_ key on one or more selected files.
 
 In PowerToys, a _**Space**_ alone can't be used as an activation shortcut, so the best you can do is set it to something similar like _**Win-Space**_.
 
-#### Screen Ruler
+#### 4. Screen Ruler
 
 This allows measuring pixels on the screen in various useful ways. I'm not aware of a similar utility on macOS, but in any case it can be very useful, for example, when working with images, building a website, etc.
 
 The default activation shortcut of _**Win-Shift-M**_ seems to work fine.
 
-#### Text Extractor
+#### 5. Text Extractor
 
 This is probably the most remarkable utility as it allows performing optical character recognition (OCR) on any part of the screen. This can be extremely useful, for example, for capturing URLs or other text in a video conference where copy-paste doesn't work.
 
