@@ -29,8 +29,8 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
   - [9. Set up eduroam](#9-set-up-eduroam)
 - [Configure WSL](#configure-wsl)
   - [1. Enable WSL](#1-enable-wsl)
-  - [2. Install a Linux distribution in WSL](#2-install-a-linux-distribution-in-wsl)
-  - [3. Configure WSL settings for the Linux distribution](#3-configure-wsl-settings-for-the-linux-distribution)
+  - [2. Install a Linux distribution](#2-install-a-linux-distribution)
+  - [3. Create WSL settings](#3-create-wsl-settings)
   - [4. Configure the Linux distribution](#4-configure-the-linux-distribution)
   - [5. Create a Windows Terminal profile for the Linux distribution](#5-create-a-windows-terminal-profile-for-the-linux-distribution)
 
@@ -224,7 +224,7 @@ WSL is included by default in Windows and it just needs to be enabled. This can 
    ```
 1. When the installation finishes, close and reopen Windows Terminal (in order to be back in a non-admin shell)
 
-### 2. Install a Linux distribution in WSL
+### 2. Install a Linux distribution
 
 The next step is to install a Linux distribution in WSL.
 
@@ -270,9 +270,40 @@ You can also terminate all running Linux distributions at once with:
 wsl --shutdown
 ```
 
-### 3. Configure WSL settings for the Linux distribution
+### 3. Create WSL settings
 
-TODO: common settings in `/etc/wsl.conf` that are recommended for all Linux distributions
+From within the Linux distribution, create the file `/etc/wsl.conf` with the following content:
+
+```
+[boot]
+systemd=true
+```
+
+The above file is the [per-distribution settings file](https://learn.microsoft.com/en-us/windows/wsl/wsl-config#configuration-settings-for-wslconf) of WSL. The setting included in the above file configures systemd as the init system in the Linux distribution. This is recommended for all Linux distributions and is required, for example, for Docker to run out-of-the-box.
+
+> You can see all properties that can be added to `wsl.conf` in the [documentation](https://learn.microsoft.com/en-us/windows/wsl/wsl-config#configuration-settings-for-wslconf).
+
+After creating the above file, exit the Linux distribution and, from a Windows shell, terminate it with:
+
+```powershell
+wsl -t <Name>
+```
+
+Then, restart the distribution again:
+
+```powershell
+wsl -d <Name>
+```
+
+The restart makes sure that the settings in `/etc/wsl.conf` get applied.
+
+To verify that the settings have been applied and systemd is running, run the following:
+
+```bash
+systemctl status
+```
+
+If systemd is indeed running, then everything is fine.
 
 ### 4. Configure the Linux distribution
 
