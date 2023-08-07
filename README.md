@@ -10,7 +10,7 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
 <!-- vim-markdown-toc GFM -->
 
 - [Introduction](#introduction)
-- [Configure Windows](#configure-windows)
+- [Set up Windows](#set-up-windows)
   - [1. Install a custom keyboard layout](#1-install-a-custom-keyboard-layout)
   - [2. Install custom key remappings](#2-install-custom-key-remappings)
   - [3. Customise the touchpad](#3-customise-the-touchpad)
@@ -27,7 +27,7 @@ Step-by-step guide for making a Windows machine more macOS/Linux-like as quick a
     - [4. Screen Ruler](#4-screen-ruler)
     - [5. Text Extractor](#5-text-extractor)
   - [9. Set up eduroam](#9-set-up-eduroam)
-- [Configure WSL](#configure-wsl)
+- [Set up WSL](#set-up-wsl)
   - [1. Enable WSL](#1-enable-wsl)
   - [2. Install a Linux distribution](#2-install-a-linux-distribution)
   - [3. Create WSL settings](#3-create-wsl-settings)
@@ -42,12 +42,12 @@ If you're reading this, you're probably a non-Windows user who is forced, throug
 
 The survival guide consists mainly of the following parts:
 
-1. Configure Windows
-1. Install Linux on Windows with [WSL](https://learn.microsoft.com/en-us/windows/wsl/)
+1. Set up Windows
+1. Set up [WSL](https://learn.microsoft.com/en-us/windows/wsl/) to run Linux on Windows
 
 Let's bite the bullet and go through it!
 
-## Configure Windows
+## Set up Windows
 
 > The following instructions are sorted by urgency, that is, the most insufferable things are fixed first and the more tolerable things are addressed later. So, it's best to follow the guide in this order.
 
@@ -201,15 +201,17 @@ The default activation shortcut of _**Win-Shift-T**_ seems to work fine. When se
 
 **To set up access to eduroam, follow the instructions [👉 here](https://github.com/weibeld/eduroam-setup).**
 
-## Configure WSL
+## Set up WSL
 
-Now that Windows itself is a tiny bit less insufferable, it's time to install Linux on it so that you can forget about 90% of the time that you're actually working on Windows.
+Now that Windows itself is a tiny bit less insufferable, it's time to install Linux on Windows so that you can stay 90% of the time in a Linux environment and at least partly forget that you are are forced to work on a Windows machine.
 
-One possible way to do this is with the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/) version 2.
+The traditional way of using Linux on Windows is to either set up [dual boot](https://en.wikipedia.org/wiki/Multi-booting) or run a Linux virtual machine on Windows (e.g. with VirtualBox).
 
-> Alternative ways are running Linux in a virtual machine (VM) or setting up Windows/Linux [dual boot](https://en.wikipedia.org/wiki/Multi-booting).
+However, Microsoft provides a more performant and integrated way to run Linux on Windows called the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/).
 
-Note that the following instructions will use Ubuntu as an example Linux distributions, however, the process remains largely the same for other Linux distributions.
+> There exist WSL versions 1 and 2 which use fundamentally different underyling technologies. This guide focuses exclusively **WSL 2** and whenever WSL is mentioned, WSL 2 is implicitly meant. You can read [here](https://learn.microsoft.com/en-us/windows/wsl/compare-versions) about the differences between WSL 1 and WSL 2.
+
+WSL is esentially a built-in type 1 (i.e. bare-metal) hypervisor (specifically, WSL uses [Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/)) that is targeted at running Linux on Windows and tightly integrated with the Windows environment. It allows running Linux distributions on Windows in an efficent and integrated way (e.g. very fast installation and startup times, full access to Windows files, possibility to execute Windows binaries from Linux, etc.).
 
 ### 1. Enable WSL
 
