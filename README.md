@@ -1,6 +1,6 @@
 # Windows Setup
 
-Survival guide for non-Windows user to make a Windows machine more UNIX-like and thus more bearable.
+Survival guide for non-Windows users to make a Windows machine more UNIX-like and thus more bearable.
 
 > The instructions in this repository have been tested with **Windows 10**.
 
@@ -37,7 +37,7 @@ Survival guide for non-Windows user to make a Windows machine more UNIX-like and
 
 ## Introduction
 
-If you're reading this, you're probably a non-Windows user who involuntarily has to work on a Windows machine (_ugh!_). This repository contains instructions to get out of this miserable situation as quick as possible and create an environment that is actually usable to you.
+If you're reading this, you're probably a non-Windows user who involuntarily has to work on a Windows machine (_ugh!_). This repository contains instructions to get out of this miserable situation as quickly as possible and create an environment that is actually usable to you.
 
 This survival guide consists of the following two main parts:
 
@@ -48,7 +48,7 @@ In the first part, Windows itself is tweaked to get rid of the worst hindrances 
 
 > This guide uses WSL 2 and not WSL 1, see [documentation](https://learn.microsoft.com/en-us/windows/wsl/compare-versions) to compare the two versions.
 
-Nobody wants to spend more time than absolutely necessary on Windows, so let's not lose any time and set up a Linux environment as quick as possible!
+Nobody wants to spend more time than necessary on Windows, so let's not lose any time and set up a Linux environment as quickly as possible!
 
 ## 1. Set up Windows
 
@@ -57,7 +57,7 @@ you need to perform the step in this other GitHub repository. These occurrences 
 
 ### 1. Install a custom keyboard layout
 
-There's nothing more annoying than not being able to type the keys you want to. While Windows comes with a large set of pre-installed keyboard layouts, it might not include the specific variation that you're used to. For these cases, here's how to install custom keyboard layout:
+There's nothing more annoying than not being able to type the keys you want to. While Windows comes with a large set of pre-installed keyboard layouts, it might not include the specific variation that you're used to. For these cases, here's how to install a custom keyboard layout:
 
 **[👉 Find instructions here](https://github.com/weibeld/logitech-swiss-german-keyboard-layout#windows)**
 
@@ -65,7 +65,7 @@ The above instructions centre around the _Logitech Swiss German_ keyboard layout
 
 ### 2. Install custom key remappings
 
-If you come from macOS, having to type `Ctrl-C` instead of `Cmd-C` for copying is major productivity blocker, especially if you have to switch between the two systems. Fortunately, you can remap these keys to make the Windows shortcuts more similar to the macOS shorcuts. Here's how:
+If you come from macOS, having to type `Ctrl-C` instead of `Cmd-C` for copying is a major productivity blocker, especially if you have to switch between the two systems. Fortunately, you can remap these keys to make the Windows shortcuts more similar to the macOS shortcuts. Here's how:
 
 **[👉 Find instructions here](https://github.com/weibeld/autohotkey-windows-key-remappings)**
 
@@ -132,9 +132,9 @@ The drawback of using winget is that you might not get the newest version of Win
 
 > Once installed, you can locate Windows Terminal as `wt` in the start menu.
 
-Windows Terminal can be fully configured through a single JSON filed called `settings.json`.
+Windows Terminal can be fully configured through a single JSON file called `settings.json`.
 
-Windows Terminal can be customised and configured in myriads of ways, and it's worth to do so because this is where you will probably spend 90% of your time when you're working on the Windows machine.
+Windows Terminal can be customised and configured in a myriad of ways, and it's worth doing so because this is where you will probably spend 90% of your time when you're working on the Windows machine.
 
 The entire configuration is contained in a single JSON file called `settings.json`. That means, customising Windows Terminal is as easy as importing a custom `settings.json` file into Windows Terminal. Here is a ready-to-use `settings.json` file and how to apply it:
 
@@ -144,14 +144,14 @@ Feel free to adjust the settings file to your needs. You can find all the suppor
 
 ### 7. Install Git for Windows
 
-This is not for using Git on Windows (_God forbid!_) but for making it as straightforward as possible to set up Git credentials in the Linux distribution later.
+This is not for using Git on Windows (_God forbid!_) but for making it as straightforward as possible to set up Git credentials in the Linux distribution in WSL later.
 
 In particular, the purpose for installing Git on Windows is actually only to have the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) running on Windows, which can then be accessed from Git in the installed Linux instances as their credential manager. This is the [recommended way](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json) of setting up Git credentials for Linux in WSL.
 
 To install Git for Windows, proceed as follows:
 
 1. Go to the [GitHub releases](https://github.com/git-for-windows/git/releases) page of the Git for Windows GitHub repository
-1. Select the latest stable release and  download the `*-64-bit.exe` of this release
+1. Select the latest stable release and  download the `*-64-bit.exe` file of this release
 1. Install it by double-clicking and accept all the default options of the installer
 
 That's it! You never need to use Git itself on Windows.
@@ -234,7 +234,7 @@ WSL is included by default in Windows and it just needs to be enabled. To do so,
 wsl --install
 ```
 
-To open a shell as an administrator, you ca locate Windows Terminal in the start menu (search for `wt`) and then click on _**Run as administrator**_.
+To open a shell as an administrator, you can locate Windows Terminal in the start menu (search for `wt`) and then click on _**Run as administrator**_.
 
 When the installation completes, close Windows Terminal and reopen it in order to be back in a non-admin shell.
 
@@ -275,7 +275,7 @@ wsl -l -v
 wsl --unregister <Distribution>
 ```
 
-These commands are best executed in a Windows shell, such as PowerShell or Command Prompt. However, you can also run the `wsl` command from Linux (as mentioned, you can run Windows executables from Linux in WSL), however, in that case, you _must_ append the `.exe` extension, so the command that you have to use from Linux would be `wsl.exe`.
+These commands are best executed in a Windows shell, such as PowerShell or Command Prompt. However, you can also run the `wsl` command from Linux (as mentioned, you can run Windows executables from Linux in WSL), but in that case, you _must_ append the `.exe` extension, so the command that you have to use from Linux would be `wsl.exe`.
 
 > You can find the complete documentation of the `wsl` command in the [WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/basic-commands).
 
@@ -316,7 +316,7 @@ sudo systemctl status
 
 ### 4. Set up Linux
 
-The next step is to set up Linux with the customisations, settings, and tools that you're used to, so that you will feel right at home. Below is a script that performs this setup in one go in an interactive way:
+The next step is to set up Linux with the customisations, settings, and tools that you're used to so that you will feel right at home. Below is a script that performs this setup in one go in an interactive way:
 
 **[👉 Find instructions here](https://github.com/weibeld/linux-setup)**
 
@@ -326,9 +326,9 @@ The above script naturally includes an opinionated set of customisations, settin
 
 So far you probably started your Linux distribution by first launching PowerShell or Command Prompt in Windows Terminal and then running `wsl -d <Distribution>`. This works, however, there is a better way, namely by creating a Windows Terminal _profile_ for your Linux distribution.
 
-A profile includes a command to run at startup and related settings, so that when you open this profile, you're dropped right into a specific environment, such as your Linux distribution. You can also set one profile as the default profile so that when you open Windows Terminal, you're automatically dropped into this profile.
+A profile includes a command to run at startup and related settings so that when you open this profile, you're dropped right into a specific environment, such as your Linux distribution. You can also set one profile as the default profile so that when you open Windows Terminal, you're automatically dropped into this profile.
 
-To create a new profile for your Linux distribution and set it as the default, proceeds as follows:
+To create a new profile for your Linux distribution and set it as the default, proceed as follows:
 
 1. In Windows Terminal type `Ctrl-,` to open the settings
 1. In the left settings pane, click on _**Add a new profile > New empty profile**_
