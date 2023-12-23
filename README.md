@@ -59,7 +59,7 @@ you need to perform the step in this other GitHub repository. These occurrences 
 
 There's nothing more annoying than not being able to type the keys you want to. While Windows comes with a large set of pre-installed keyboard layouts, it might not include the specific variation that you're used to. For these cases, here's how to install a custom keyboard layout:
 
-**[👉 Find instructions here](https://github.com/weibeld/logitech-swiss-german-keyboard-layout#windows)**
+**[👉 Find instructions here](https://github.com/weibeld-personalisation/logitech-swiss-german-keyboard-layout#windows)**
 
 The above instructions centre around the _Logitech Swiss German_ keyboard layout, however, it works in exactly the same way for any other keyboard layout. The only thing you needs is your desired keyboard layout as a `.klc` file.
 
@@ -67,7 +67,7 @@ The above instructions centre around the _Logitech Swiss German_ keyboard layout
 
 If you come from macOS, having to type `Ctrl-C` instead of `Cmd-C` for copying is a major productivity blocker, especially if you have to switch between the two systems. Fortunately, you can remap these keys to make the Windows shortcuts more similar to the macOS shortcuts. Here's how:
 
-**[👉 Find instructions here](https://github.com/weibeld/autohotkey-windows-key-remappings)**
+**[👉 Find instructions here](https://github.com/weibeld-personalisation/windows-autohotkey-remappings)**
 
 The above remappings are specifically targeted at macOS users. If you come from Linux, feel free to outcomment or adapt any of the mappings.
 
@@ -138,7 +138,7 @@ Windows Terminal can be customised and configured in a myriad of ways, and it's 
 
 The entire configuration is contained in a single JSON file called `settings.json`. That means, customising Windows Terminal is as easy as importing a custom `settings.json` file into Windows Terminal. Here is a ready-to-use `settings.json` file and how to apply it:
 
-**[👉 Find instructions here](https://github.com/weibeld/windows-terminal-settings)**
+**[👉 Find instructions here](https://github.com/weibeld-personalisation/settings-windows-terminal)**
 
 Feel free to adjust the settings file to your needs. You can find all the supported properties and their values in the [Windows Terminal documentation](https://learn.microsoft.com/en-us/windows/terminal/).
 
@@ -146,7 +146,7 @@ Feel free to adjust the settings file to your needs. You can find all the suppor
 
 This is not for using Git on Windows (_God forbid!_) but for making it as straightforward as possible to set up Git credentials in the Linux distribution in WSL later.
 
-In particular, the purpose for installing Git on Windows is actually only to have the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) running on Windows, which can then be accessed from Git in the installed Linux instances as their credential manager. This is the [recommended way](https://github.com/weibeld/windows-terminal-settings/blob/main/settings.json) of setting up Git credentials for Linux in WSL.
+In particular, the purpose for installing Git on Windows is actually only to have the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) running on Windows, which can then be accessed from Git in the installed Linux instances as their credential manager. This is the [recommended way](https://github.com/weibeld-personalisation/settings-windows-terminal/blob/main/settings.json) of setting up Git credentials for Linux in WSL.
 
 To install Git for Windows, proceed as follows:
 
@@ -210,7 +210,7 @@ After selecting a rectangle on the screen, the extracted text is saved immediate
 
 Finally, if you have access to [eduroam](https://eduroam.org/), here's how to set it up on Windows:
 
-**[👉 Find instructions here](https://github.com/weibeld/eduroam-setup)**
+**[👉 Find instructions here](https://github.com/weibeld-personalisation/eduroam)**
 
 ## 2. Set up WSL
 
@@ -318,7 +318,7 @@ sudo systemctl status
 
 The next step is to set up Linux with the customisations, settings, and tools that you're used to so that you will feel right at home. Below is a script that performs this setup in one go in an interactive way:
 
-**[👉 Find instructions here](https://github.com/weibeld/linux-setup)**
+**[👉 Find instructions here](https://github.com/weibeld-personalisation/linux)**
 
 The above script naturally includes an opinionated set of customisations, settings, and tools. If your needs are different, feel free to adjust it accordingly.
 
@@ -335,7 +335,7 @@ To create a new profile for your Linux distribution and set it as the default, p
 1. Configure the following parameters of the new profile:
    1. Set _**Name**_ an arbitrary name for the profile (e.g. "Ubuntu")
    1. Set _**Command line**_ to: `wsl -d <Distribution>`
-   1. Set _**Icon**_ to a local image file (find some example icons [here](https://github.com/weibeld/windows-terminal-settings/tree/main/icons))
+   1. Set _**Icon**_ to a local image file (find some example icons [here](https://github.com/weibeld-personalisation/settings-windows-terminal/tree/main/icons))
 1. Set the created profile as the default profile:
    1. Go to _**Startup**_ in the left settings pane
    1. Set _**Default profile**_ to the profile you just created
@@ -343,7 +343,7 @@ To create a new profile for your Linux distribution and set it as the default, p
 
 Once this is done, quit Windows Terminal and restart it: you should now be dropped right into your Linux distribution.
 
-> Note: the [Windows Terminal settings](https://github.com/weibeld/windows-terminal-settings) installed above already include profiles for the Ubuntu and Debian distributions in WSL. If you also installed Ubuntu or Debian, you may either use these existing profiles instead of creating a new one, or you may delete these profiles and create a fresh one.
+> Note: the [Windows Terminal settings](https://github.com/weibeld-personalisation/settings-windows-terminal) installed above already include profiles for the Ubuntu and Debian distributions in WSL. If you also installed Ubuntu or Debian, you may either use these existing profiles instead of creating a new one, or you may delete these profiles and create a fresh one.
 
 ## Conclusion
 
